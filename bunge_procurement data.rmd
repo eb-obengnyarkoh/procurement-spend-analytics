@@ -1,5 +1,5 @@
 ---
-title: "Bunge Sample Data for procurement Excel training"
+title: "Sample Data for procurement training"
 author: "KNyarkoh"
 date: "2026-05-12"
 output: html_document
