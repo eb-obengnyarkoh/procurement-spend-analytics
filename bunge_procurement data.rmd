@@ -232,7 +232,7 @@ purchase_requisition = data.frame(pr_number = sprintf("PR%04d" ,1:3000) ,
                                   date_requested = sample(date ,3000 ,replace = TRUE) - 30 ) %>%
   mutate(quantity = ifelse(product_category == "service" ,round(quantity/100,0) ,round(quantity/10,0)) ,
          date_expected = date_requested + round(rnorm(3000 ,45 ,10) ,0) ,
-         contact = paste0(requester ,"@bunge.com") ,
+         contact = paste0(requester ,"@yenwho.com") ,
          pr_approval = sample(c("yes" ,"no") ,prob = c(0.9 ,0.1) ,3000 ,replace = TRUE) ,
          freq = 1 ) %>%
   mutate(across(c(1:4,7,8,15,16) ,as.factor))
