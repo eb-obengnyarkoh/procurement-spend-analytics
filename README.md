@@ -1,13 +1,11 @@
 # Synthetic Procurement Data Generator
 
 ## Background
-This project creates realistic synthetic procurement data that can be used for spend analysis, supplier performance measurement, procurement risk assessment, dashboard development, and machine learning applications. The goal is to provide a reusable dataset for analytics training and portfolio projects while demonstrating practical data engineering and analytics skills in R.
+Procurement analytics is increasingly important for organizations seeking to optimize spending, improve supplier performance, manage procurement risks, and support strategic sourcing decisions. However, access to realistic procurement datasets is often limited due to confidentiality and privacy concerns. This project addresses that challenge by creating a synthetic procurement dataset that mirrors real-world procurement processes while remaining suitable for analytics training, portfolio development, dashboard design, and machine learning applications.
 
 ## Overview
 
-This project generates synthetic procurement and supplier datasets for analytics training, dashboard development, and machine learning exercises. The data simulates a realistic procurement environment with suppliers, products, purchase requests, purchase orders, delivery performance metrics, and vendor banking information.
-
-The project was developed using R and the tidyverse ecosystem to demonstrate data generation, data engineering, and procurement analytics concepts.
+This project generates realistic synthetic procurement and supplier data for analytics training and demonstration purposes. The dataset simulates a procurement environment with suppliers, products, purchase requests, purchase orders, delivery performance metrics, invoices, and vendor banking information. It is designed to support spend analysis, supplier performance measurement, procurement risk assessment, dashboard development, and machine learning exercises while showcasing practical data engineering and analytics skills in R.
 
 ## Features
 
@@ -87,3 +85,9 @@ The project was developed using R and the tidyverse ecosystem to demonstrate dat
 ## Author
 Ebenezer (Eb) Obeng-Nyarkoh
 Data Analytics Leader | Procurement Analytics | Supply Chain Analytics | R Programming | Business Intelligence
+
+
+
+<img width="3912" height="2268" alt="image" src="https://github.com/user-attachments/assets/db79bf0e-d485-4abf-9fde-6b612ff1ae53" />
+
+
