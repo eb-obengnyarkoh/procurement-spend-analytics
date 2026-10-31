@@ -1,5 +1,8 @@
 # Synthetic Procurement Data Generator
 
+## Background
+This project creates realistic synthetic procurement data that can be used for spend analysis, supplier performance measurement, procurement risk assessment, dashboard development, and machine learning applications. The goal is to provide a reusable dataset for analytics training and portfolio projects while demonstrating practical data engineering and analytics skills in R.
+
 ## Overview
 
 This project generates synthetic procurement and supplier datasets for analytics training, dashboard development, and machine learning exercises. The data simulates a realistic procurement environment with suppliers, products, purchase requests, purchase orders, delivery performance metrics, and vendor banking information.
