@@ -88,6 +88,6 @@ Data Analytics Leader | Procurement Analytics | Supply Chain Analytics | R Progr
 
 
 
-<img width="3912" height="2268" alt="image" src="https://github.com/user-attachments/assets/db79bf0e-d485-4abf-9fde-6b612ff1ae53" />
+<img width="1304" height="756" alt="image" src="https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance"/>
 
 
