@@ -65,11 +65,18 @@ This project generates realistic synthetic procurement and supplier data for ana
 ## Repository Structure
 
 ```text
+procurement-data-analytics/
 ├── data/
-├── notebooks/
-├── procurement_training.Rmd
-├── procurement_training.html
+│     └── procurement_data.csv
+├── scripts/
+│     └── generate_data.R
+├── reports/
+│    └── procurement_analysis.Rmd
+├── outputs/
+│    └── procurement_analysis.html
+├── dashboard/
 ├── README.md
+└── LICENSE
 ```
 
 ## Skills Demonstrated
@@ -86,6 +93,8 @@ This project generates realistic synthetic procurement and supplier data for ana
 Ebenezer (Eb) Obeng-Nyarkoh
 Data Analytics Leader | Procurement Analytics | Supply Chain Analytics | R Programming | Business Intelligence
 
+
+<img width="3912" height="2268" alt="image" src="https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance"/>
 
 
 <img width="1304" height="756" alt="image" src="https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance"/>
