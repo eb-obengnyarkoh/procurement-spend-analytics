@@ -66,15 +66,19 @@ This project generates realistic synthetic procurement and supplier data for ana
 
 ```text
 procurement-data-analytics/
-├── data/
-│     └── procurement_data.csv
+│
 ├── scripts/
-│     └── generate_data.R
+│   ├── generate_data.Rmd
+│   └── procurement_analysis.Rmd
+│
 ├── reports/
-│    └── procurement_analysis.Rmd
-├── outputs/
-│    └── procurement_analysis.html
+│   ├── procurement_analysis.Rmd
+│   └── procurement_analysis.html
+│
 ├── dashboard/
+│
+├── images/
+│
 ├── README.md
 └── LICENSE
 ```
