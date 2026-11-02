@@ -79,8 +79,6 @@ procurement-data-analytics/
 ├── dashboard/
 │
 ├── images/
-│
-└── LICENSE
 ```
 
 ## Skills Demonstrated
