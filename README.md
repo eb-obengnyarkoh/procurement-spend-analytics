@@ -98,9 +98,4 @@ Ebenezer (Eb) Obeng-Nyarkoh
 Data Analytics Leader | Procurement Analytics | Supply Chain Analytics | R Programming | Business Intelligence
 
 
-<img width="3912" height="2268" alt="image"https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance
-
-
-[<img width="1304" height="756" alt="image"src="https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance"/>](https://public.tableau.com/app/profile/kidscodegh/viz/performace_17710794305960/revenueperformance)
-
 
