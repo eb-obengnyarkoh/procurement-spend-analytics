@@ -1,35 +1,346 @@
 ---
-title: "Sample Data for procurement training"
+title: "Synthetic Procurement Dataset for Analytics Training"
 author: "KNyarkoh"
 date: "2026-05-12"
-output: html_document
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
 ---
+
+This project demonstrates the design and generation of a realistic procurement dataset covering supplier management, sourcing, purchasing, invoicing, and supplier performance evaluation. The dataset was developed for procurement analytics, dashboard development, machine learning, and training purposes.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r cars}
+### Introduction
+Procurement functions generate large volumes of operational and financial data that can be leveraged to improve sourcing decisions, supplier performance, spend visibility, and organizational efficiency. However, access to real procurement datasets is often constrained by confidentiality, privacy, and commercial sensitivity.
+
+This project presents a synthetic procurement dataset designed to simulate the end-to-end procurement lifecycle of a medium-to-large enterprise. The dataset was developed for analytics training, dashboard development, data modeling, machine learning experimentation, and procurement performance analysis. While the data is artificially generated, the business relationships and procurement workflows have been structured to closely resemble real-world procurement operations.
+
+The business linkage models actual business process flow:
+Supplier → Product → Price → Purchase Requisition → Purchase Order → Invoice → Supplier Performance Analysis.
+
+### Business Objective
+The primary objective of this project is to create a realistic procurement dataset that enables analysts, students, and professionals to develop practical skills in procurement and supply chain analytics.
+
+The dataset supports the analysis of key procurement activities including:
+
+- Supplier management
+- Purchase requisitions
+- Purchase orders
+- Invoice processing
+- Vendor performance monitoring
+- Procurement risk management
+- Spend analysis
+- Operational efficiency measurement
+
+### Dataset Overview
+This synthetic dataset simulates the end-to-end procurement lifecycle of a medium-to-large enterprise operating across multiple departments and supplier categories. It provides a robust foundation for:
+
+- Advanced procurement analytics
+- Spend and cost optimization analysis
+- Supplier performance and risk assessment
+- Executive dashboards and operational reporting
+- Predictive modeling and forecasting
+- Machine learning and artificial intelligence applications
+- Procurement process improvement and efficiency analysis
+- Supplier segmentation and strategic sourcing analysis
+- Procurement KPI tracking and performance measurement
+- Training, simulation, and analytics education
+
+The dataset contains:
+
+ - 100 suppliers
+ - 39 products and services
+ - 3,000 purchase requisitions
+ - Purchase orders generated from approved requisitions
+ - Supplier invoices
+ - Supplier performance metrics
+
+The procurement ecosystem consists of:
+
+##### Master Data
+
+ - Product Master
+ - Supplier Master
+ - Product Pricing Catalog
+
+##### Transactional Data
+
+ - Purchase Requisitions (PR)
+ - Purchase Orders (PO)
+ - Supplier Invoices
+
+##### Analytical Data
+
+ - Supplier Risk Assessment
+ - Supplier Satisfaction Metrics
+ - Delivery Performance Metrics
+ - Supplier Segmentation
+
+The dataset includes procurement activities across multiple departments such as Finance, Supply Chain, Procurement, IT, Legal, Sustainability, Human Resources, Sales, Marketing, Engineering, and Risk Management
+
+### Dataset Structure
+The project consists of the following datasets:
+
+#### 1. Product Master
+Contains information on goods and services available for procurement. Key attributes include:
+
+- Product ID
+- Product Name
+- Product Category
+- Product Type
+
+#### 2. Supplier Master
+Contains supplier profile information. Key attributes include:
+
+- Supplier ID
+- Supplier Name
+- Supplier Origin
+- Supplier Classification
+- Supplier Category
+- Supplier Tier
+
+#### 3. Product Price Catalog
+Contains product pricing information and price ranges. Key attributes include:
+
+- Product ID
+- Price ID
+- Unit Price
+- Minimum Price
+- Maximum Price
+
+#### 4. Purchase Requisition
+Captures procurement requests initiated by employees.
+
+#### 5. Purchase Order
+Captures approved procurement requests that have been converted into supplier orders.
+
+#### 6. Invoice
+Captures supplier billing information associated with purchase orders.
+
+#### 7. Supplier Performance
+Contains operational and satisfaction measures used for supplier evaluation.
+
+
+
+### Data Dictionary Tables
+
+#### Purchase Requisition Dataset
+
+| Variable | Description |
+|-----------|------------|
+|pr_number	           |Unique purchase requisition identifier |
+|requester	           |Employee requesting goods or services  |
+|department	           |Requesting department                  |
+|product_name	         |Requested product or service           |
+|quantity	             |Requested quantity                     |
+|unit_price	           |Product unit price                     |
+|preferred_supplier	   |Preferred supplier                     |
+|date_requested	       |Date requisition was submitted         |
+|date_expected	       |Expected fulfillment date              |
+|pr_approval	         |    Approval status                    |
+
+
+#### Purchase Order Dataset
+
+| Variable | Description |
+|-----------|------------|
+|PO_number	                |Purchase order number           |
+|supplier_ID	              |Supplier identifier             |
+|total_price	              |Total order value               |
+|date_order	                |Order placement date            |
+|eta	Expected delivery     |lead time                       |
+|cycling_time	              |Actual procurement cycle time   |
+|status	                    |Order status                    |
+
+
+#### Supplier Dataset
+
+| Variable | Description |
+|-----------|------------|
+|supplier_ID	          |Unique supplier identifier         |
+|supplier_name	          |Supplier name                      |
+|supplier_origin	      |Local or international supplier    |
+|supplier_category	      |Supplier segmentation              |
+|tier	                  |Supplier tier level                |
+|classification	          |Supplier classification            |
+
+
+#### Supplier Performance Dataset
+
+| Variable | Description |
+|-----------|------------|
+|risk	                 |Supplier risk score
+|impact	               |Business impact score
+|csat	                 |Customer satisfaction score
+|psat	                 |Procurement satisfaction score
+|nps	                 |Net Promoter Score
+|status_delivery	     |Delivery performance status
+|defects	             |Reported product/service defects
+
+
+#### Supplier Performance Dataset
+
+| Variable | Description |
+|-----------|------------|
+|risk	                 |Supplier risk score
+|impact	               |Business impact score
+|csat	                 |Customer satisfaction score
+|psat	                 |Procurement satisfaction score
+|nps	                 |Net Promoter Score
+|status_delivery	     |Delivery performance status
+|defects	             |Reported product/service defects
+
+### Sample Records
+
+The examples below illustrate the type of records generated by the dataset.
+
+#### Purchase Requisition Example
+
+| Field | Example |
+|-----------|------------|
+|PR Number	            |PR0001        |
+|Department	            |Finance       |
+|Product	            |Stationery    |
+|Quantity	            |200           |
+|Unit Price	            |45.50         |
+|Preferred Supplier	    |SUP023        |
+|Approval Status	    |Yes           |
+
+#### Purchase Order Example
+
+| Field | Example |
+|-----------|------------|
+|PO Number	  |2025-00001    |
+|Supplier	  |SUP023        |
+|Total Value	  |9,100         |
+|ETA	          |30 Days       |
+|Status	      |Sent          |
+
+### Potential Analytics Use Cases
+The dataset can be used to answer a wide variety of procurement and supply chain business questions.
+
+#### Spend Analytics
+
+- Who are the highest-spend suppliers?
+- Which categories account for the largest procurement spend?
+- What departments generate the highest purchasing activity?
+
+#### Supplier Analytics
+
+- Which suppliers present the highest operational risk?
+- How does supplier performance vary by category?
+- What percentage of spending goes to strategic suppliers?
+
+#### Operational Analytics
+
+- What is the average procurement cycle time?
+- Which departments experience the longest approval delays?
+- What proportion of orders are delivered on time?
+
+#### Procurement Performance Dashboards
+
+- Supplier scorecards
+- Spend dashboards
+- Purchase order tracking
+- Delivery performance monitoring
+- Risk management dashboards
+
+### Machine Learning Applications
+Because the dataset contains structured procurement relationships, it is suitable for several machine learning use cases.
+
+#### Classification Models
+
+Predict:
+
+- Purchase requisition approval
+- Purchase order status
+- On-time delivery
+- Supplier risk classification
+
+#### Regression Models
+
+Predict:
+
+- Cycle time
+- Procurement spend
+- Supplier satisfaction scores
+- Delivery lead time
+
+#### Clustering
+
+Segment suppliers by:
+
+- Risk
+- Spend
+- Strategic importance
+- Satisfaction levels
+
+#### Anomaly Detection
+
+Identify:
+
+- Unusual purchase behavior
+- Low-performing suppliers
+- Abnormal transaction patterns
+- Potential procurement control violations
+
+### Dataset Generation Methodology
+The dataset was generated using a rule-based synthetic data generation approach implemented in R.
+The methodology consisted of the following steps:
+
+1.	Creation of product master records containing goods and service categories.
+2.	Generation of realistic product price ranges.
+3.	Creation of supplier master records with tiering, classifications, and segmentation attributes.
+4.	Mapping suppliers to products and services.
+5.	Generating purchase requisitions from departmental demand.
+6.	Converting approved requisitions into purchase orders.
+7.	Generating invoices from purchase orders.
+8.	Calculating supplier performance metrics including risk, impact, satisfaction, and delivery indicators.
+
+Randomization techniques were combined with predefined business rules to simulate realistic procurement scenarios while preserving logical relationships across datasets.
+
+### Appendix A: Dataset Generation Code
+The complete R code used to generate the synthetic dataset is provided in this appendix.
+
+The code demonstrates:
+
+- Synthetic master-data creation
+- Procurement transaction simulation
+- Business-rule implementation
+- Data relationships and joins
+- Supplier scorecard generation
+- Performance metric calculation
+
+Users can modify the parameters, probabilities, categories, and business rules to generate alternative procurement scenarios for analytics training and experimentation. 
+
+#### Load all required libraries
+```{r libraries, echo=TRUE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(lubridate)
 library(randomForest)
-library(tree)
 library(rpart)
 library(rpart.plot)
 library(caret)
+library(tree)
 
 ```
 
-# Key Variables in Procurement Processing Data
+
+#### Define Key Reference Data for Procurement Dataset Generation
+This synthetic procurement dataset was generated using predefined reference data covering employees, departments, suppliers, procurement categories, and sourcing characteristics. Details are provided below.
 ```{r procurement_dataset, echo=FALSE}
 
 set.seed(911)
 # requester info
 fname = c("Kwasi" ,"Kojo" ,"Kwabena" ,"Kwaku" ,"Yaw" ,"Kofi" ,"Kwame" ,
           "Akosua" ,"Adjoa" ,"Abena" ,"Akua" ,"Yaa" ,"Efia" ,"Ama")
-lname = c("Mensah" ,"Billings" ,"Osei" ,"Okine" ,"Opoku" ,"Owusu" ,"Adams" ,
-          "Adjei" ,"Odum" ,"Fosu" ,"Ntim" ,"Boakye" ,"Smith" ,"Doe")
+lname = c("Adams" ,"Adjei" ,"Bill" ,"Boakye" ,"Doe" ,"Fosu" ,"Mensah" ,
+          "Ntim" ,"Odum" ,"Okine" ,"Opoku" ,"Osei" ,"Owusu" ,"Smith")
 department = c("finance", "legal", "sustainability", "HR", "supply chain", "operations", "procurement",
                "risk management" ,"sales" ,"marketing" ,"IT" ,"engineering")
 
@@ -83,8 +394,8 @@ bank_branch = c("Tema" ,"Ashiaman" ,"Accra" ,"Kumasi" ,"Takoradi" ,"Sunyani" ,"O
 
 ```
 
-# 1. product details
-```{r }
+#### 1. Create master product reference table for goods and services
+```{r master data, echo=TRUE, warning=FALSE, message=FALSE}
 product_details = rbind(data.frame(product_type = "goods" ,
                                    product_category = "agriculture" ,
                                    product_name = product_goods_agric ) ,
@@ -101,15 +412,10 @@ product_details = rbind(data.frame(product_type = "goods" ,
   mutate(across(c(1:4) ,as.factor) ,
          freq = 1)
 
-write_csv(product_details ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_products_details.csv")
-
-summary(product_details)
-
 ```
 
-# 2. Price range of Product
-```{r }
+#### 2. Generate Product Price Ranges
+```{r product price list, echo=TRUE, warning=FALSE, message=FALSE}
 # Average Prices in Ghana (2026) with Product IDs
 
 set.seed(911)
@@ -137,20 +443,10 @@ left_join(data.frame(product_id = product_details[,4],
          freq = 1) %>%
   mutate(across(c(1,2,4) ,as.factor))
 
-#write_csv(price_list ,
-#          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_price_list.csv")
-
-summary(price_list)
-hist(price_list$price)
-
-price_list %>%
-  group_by(product_name) %>%
-  summarise(avg_price = mean(price))
-
 ```
 
-# 3. Supplier Information
-```{r }
+#### 3. Supplier Information
+```{r supplier, echo=TRUE, warning=FALSE, message=FALSE}
 set.seed(911)
 suppliers = data.frame(supplier_ID = supplier_ID ,
                        supplier_name = supplier_nm ,
@@ -163,15 +459,10 @@ suppliers = data.frame(supplier_ID = supplier_ID ,
                             sample(bank_branch ,100 ,replace = TRUE) )) %>%
   mutate(across(c(1:4,6,7,9) ,as.factor))
 
-write_csv(suppliers ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_suppliers.csv")
-
-summary(suppliers)
-
 ```
 
-# 4a. supplier product map function
-```{r }
+#### 4a. supplier product map function
+```{r supplier product, echo=TRUE, warning=FALSE, message=FALSE}
 supplier_product = lapply(suppliers[,1] ,function(s){
   data.frame(supplier = s ,
    product = as.factor(sample(product_details[,4] ,5)) ,
@@ -180,38 +471,26 @@ supplier_product = lapply(suppliers[,1] ,function(s){
   
   do.call(rbind,.)
 
-summary(supplier_product)
-
 ```
 
-# 4b. supplier product map data
-```{r }
+#### 4b. supplier product map data
+```{r supplier product mapping, echo=TRUE, warning=FALSE, message=FALSE}
 supplier_prodDetails = supplier_product %>%
   left_join(suppliers ,by = c("supplier" = "supplier_ID") ,suffix = c(x="" ,y="")) %>%
   left_join(product_details ,by = c("product" = "product_id") ,suffix = c(x="" ,y="")) %>%
   mutate(across(c(2,11,12,13) ,as.factor))
 
-write_csv(supplier_prodDetails ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_supplier_product_details.csv")
-
-summary(supplier_prodDetails)
-
 ```
 
-# 4c. supplier price list
-```{r }
+#### 4c. supplier price list
+```{r pricelist, echo=TRUE, warning=FALSE, message=FALSE}
 supplier_price_list = supplier_prodDetails %>%
   left_join(price_list ,by = c("product" = "product_id") ,suffix = c(x="" ,y=""))
 
-write_csv(supplier_price_list ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_supplier_price_list.csv") 
-
-summary(supplier_price_list)
-
 ```
 
-# 5. Purchase Requisition
-```{r }
+#### 5. Purchase Requisition
+```{r PR, echo=TRUE, warning=FALSE, message=FALSE}
 set.seed(123)
 product_request = supplier_price_list %>%
   slice(rep(1:n() ,length.out=3000))
@@ -232,21 +511,15 @@ purchase_requisition = data.frame(pr_number = sprintf("PR%04d" ,1:3000) ,
                                   date_requested = sample(date ,3000 ,replace = TRUE) - 30 ) %>%
   mutate(quantity = ifelse(product_category == "service" ,round(quantity/100,0) ,round(quantity/10,0)) ,
          date_expected = date_requested + round(rnorm(3000 ,45 ,10) ,0) ,
-         contact = paste0(requester ,"@yenwho.com") ,
+         contact = paste0(requester ,"@bunge.com") ,
          pr_approval = sample(c("yes" ,"no") ,prob = c(0.9 ,0.1) ,3000 ,replace = TRUE) ,
          freq = 1 ) %>%
   mutate(across(c(1:4,7,8,15,16) ,as.factor))
 
-write_csv(purchase_requisition ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_purchase_requisition.csv") 
-
-# chk for NA
- summary(purchase_requisition )
-
 ```
 
-# 6. Purchase Order after approval of request
-```{r }
+#### 6. Purchase Order after approval of request
+```{r PO, echo=TRUE, warning=FALSE, message=FALSE}
 set.seed(911)
 len_po = length(purchase_requisition$pr_approval[purchase_requisition$pr_approval == "yes"])
 
@@ -270,17 +543,10 @@ purchase_order = purchase_requisition %>%
   mutate(total_price = as.numeric(ifelse(status == "sent" ,unit_price * quantity ,"")) ) %>%
   select(-c(2:5, 14:15))
 
-write_csv(purchase_order ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_purchase_order.csv")
-
- summary( purchase_order %>% 
-            group_by(eta ,cycling_time ) %>%
-            summarise(tp = sum(total_price)) )
-
 ```
 
-# 7. Invoice while process order
-```{r }
+#### 7. Invoice while process order
+```{r invoice, echo=TRUE, warning=FALSE, message=FALSE}
 set.seed(911)
 len_invoice = length(purchase_order$status[purchase_order$status == "sent"])
 
@@ -299,17 +565,10 @@ invoice = suppliers %>%
   mutate(invoice_no = paste0(word(supplier_name ,2) ,"-" ,invoice_no) ) %>%
   select(-c(4,10,17)) %>% mutate(across(c(13,18) ,as.factor))
 
-write_csv(invoice ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/z_invoice.csv")
-
-summary(
-  invoice 
-  )
-
 ```
 
-# 8. supplier analysis
-```{r }
+#### 8. supplier analysis
+```{r supplier analytics, echo=TRUE, warning=FALSE, message=FALSE}
 set.seed(911)
 len_sup = nrow(purchase_order)
 
@@ -339,244 +598,70 @@ supplier_analysis = suppliers %>%
                           sample(c("no" ,"yes") ,len_sup ,replace = TRUE ,prob = c(0.8,0.2)) ,"" )) %>%
   mutate(across(c(15:19,24,29,38,39) ,as.factor))
 
-write_csv(supplier_analysis ,
-          "C:/Users/broda/Documents/data insights/Leo -HRpc/09 Bunge/data/y_supplier_analysis.csv")
-
-summary(supplier_analysis %>%
-          group_by(eta ,cycling_time ,status_delivery) %>%
-          summarise(tp = sum(total_price)))
-
-```
-# 9 .Predictive Analytics
-
-## 9a. random forest
-```{r }
-set.seed(911)
-supplier_prediction = na.omit(supplier_analysis)
-
-split = sample(1:nrow(supplier_prediction) ,0.7*nrow(supplier_prediction))
-train_data = supplier_prediction[split ,]
-test_data = supplier_prediction[-split ,]
-
-rf_model = randomForest(risk_level ~ supplier_origin +supplier_category +classification +nps_cat
-                        +psat_cat +csat_cat +product_category  ,
-                        data = train_data ,
-                        ntree = 500 ,      # number of trees
-                        mtry = 3 ,          # number of variables per split
-                        importance = TRUE)
-
-rf_model
-
 ```
 
-### model evaluation & variable importance
+### Appendix B: Reference Data
+This appendix contains the reference information used during dataset generation.
+
+Included reference tables include:
+
+- Employee first names
+- Employee last names
+- Departments
+- Product categories
+- Goods and services lists
+- Supplier classifications
+- Supplier tiers
+- Bank names
+- Bank branches
+- Delivery lead-time parameters
+- Product price ranges
+- Date dimensions
+
+These reference tables provide the building blocks used to generate realistic procurement records. 
+
 ```{r }
-predictions = predict(rf_model, test_data)
-confusion_matrix = table(test_data$cycling_time, predictions)
-confusion_matrix
-
-accuracy = sum(diag(confusion_matrix)) / sum(confusion_matrix)
-accuracy
-
-# variable importance
-importance(rf_model)
-varImpPlot(rf_model)
-
-```
-
-## 9b. rpart
-```{r }
-set.seed(911)
-tree_model = rpart(risk_level ~ supplier_category +classification +product_category ,
-                   #supplier_origin +nps_cat +psat_cat +csat_cat +  ,
-                    data = train_data ,method = "class" )
-
-print(tree_model)
-summary(tree_model)
-rpart.plot(tree_model)
-
-predictions = predict(tree_model ,test_data ,type = "class")
-
-cm = confusionMatrix(predictions ,test_data$risk_level)
-
-print(cm)
-
-accuracy = cm$overall["Accuracy"]
-print(accuracy)
-
-
-
-bestcp = tree_model$cptable[which.min(tree_model$cptable[, "xerror"]) ,"CP"]
-
-pruned_tree = prune(tree_model ,cp = bestcp)
-
-rpart.plot(pruned_tree)
-
-pruned_pred = predict(pruned_tree ,test_data ,type = "class")
-
-confusionMatrix(pruned_pred ,test_data$risk_level)
-
-```
-
-
-# tree package
-```{r }
-set.seed(123)
-
-# Fit tree
-tree_fit = tree(risk_level ~ supplier_origin +supplier_category +classification 
-                +nps_cat +psat_cat +csat_cat +product_category  ,
-                data = train_data)
-
-# Plot
-plot(tree_fit)
-text(tree_fit, pretty = 0)
-
-# Cross-validation
-cv_fit = cv.tree(tree_fit ,FUN = prune.misclass)
-
-# Select best size
-best_size = cv_fit$size[which.min(cv_fit$dev)]
-
-# Prune
-pruned_tree = prune.misclass(tree_fit ,best = best_size)
-
-# Predict
-pred = predict(pruned_tree ,newdata = test_data ,type = "class")
-
-# Validate
-confusionMatrix(pred ,test_data$risk_level)
-
-```
-
-# EDA
-```{r }
-# summary(purchase_order[purchase_order$total_price < 42000000,]      )
-
-purchase_order %>%
-   left_join(product_details) %>%
-  group_by(product_type ,product_name) %>%
-  summarise(max = max(unit_price)) %>%
-  arrange(max)
-
+fname
+lname
+department
 
 ```
 
 ```{r }
-purchase_order %>%
-  #filter(quantity > 1) %>%
-  ggplot(aes(unit_price)) +geom_histogram()
+supplier_ID
+supplier_nm
+supplier_origin
+supplier_category
+                   
+tier
+classification
 
 ```
 
 ```{r }
-summary(purchase_order$unit_price)       # min, median, mean, quartiles
-sd(purchase_order$unit_price)            # standard deviation
-hist(purchase_order$unit_price, main="Unit Price Distribution", xlab="Unit Price")
+product_services
+product_goods_office
+product_goods_agric
+product_goods_misc
 
-Q1 = quantile(purchase_order$unit_price ,.25)
-Q3 = quantile(purchase_order$unit_price ,.75)
-IQR = Q3-Q1
+price_range
 
-outliers = purchase_order$unit_price < Q1 - 1.5*Q1 | purchase_order$unit_price > Q3 + 1.5*Q3
+date_from
+date_to
+date
 
-```
+delivery_eta
+delivery_otd
 
-```{r }
-supplier_spend = purchase_order %>%
-  group_by(supplier_ID) %>%
-  summarise(total_spend = sum(total_price, na.rm = TRUE),
-            transactions = n()) %>%
-  arrange(desc(supplier_nm))
-
-```
-
-```{r }
-# Average Prices in Ghana (2026) with Product IDs
-# price_ranges = data.frame(
-c("850-1200",   # canola (per 100kg bag)
-"1200-1600",  # coconut (per 100 nuts)
-"850-1200",   # corn (per 100kg bag)
-"65-120",     # olive (per liter)
-"700-1100",   # palm oil (25L)
-"700-1100",   # palm kernel oil (25L)
-"850-1200",   # rapeseed (per 100kg bag)
-"850-1200",   # rice (per 100kg bag)
-"35-50",      # shea (per kg)
-"850-1200",   # sorghum (per 100kg bag)
-"850-1200",   # soybeans (per 100kg bag)
-"850-1200",   # sunflower (per 100kg bag)
-"850-1200",   # wheat (per 100kg bag)
-"45-90",      # herbicides (per liter)
-"45-90",      # pesticides (per liter)
-"0.30-3.50",  # labels
-"0.40-2.50",  # packaging materials
-"35-50",      # premix (per kg)
-"1700-3800",  # rentals (per month)
-"100-2000",   # spare parts
-"2-10"        # water (per bottle)
-"1450-2530",  # furniture
-"13-1500",    # lighting fixtures
-"4-50",       # stationery
-"20-150",     # toiletries
-"600-2500",   # calibration
-"30-400",     # catering
-"5500-6500",  # consulting
-"80-95",      # construction (cement bag)
-"100-400",    # equipment maintenance
-"150-800",    # facility maintenance
-"500-1500",   # IT systems (per user/month)
-"600-2000",   # logistics (local move)
-"65000-850000", # market research
-"1200-6000",  # security (per guard/month)
-"2500-10000", # shipping (container)
-"9500-25000", # storage (cold room)
-"1500-7000",  # training (short course)
-"30-50",      # waste management (pickup)
-)
-
-list(c(
-  calibration = "600-2500",   # 
-  catering = "30-400",     # 
-  consulting = "5500-6500"))
-
+bank_name
+bank_branch
 
 ```
 
 
 
-Supplier classification categorizes vendors by criticality, risk, and strategic value to optimize procurement, typically splitting them into strategic/core, preferred, tactical, and nuisance categories. Organizations use these classifications to focus management efforts, with common types including Tier 1-3, ESG, and diversity statuses.
-
-Common Supplier Classification List
-Strategic/Core Supplier: High-value, long-term partners essential for competitive advantage.
-Preferred Supplier: Proven vendors with high performance, prioritized for new business.
-Tactical/Operational Supplier: Suppliers of standard, low-risk items with many alternatives.
-Bottleneck Supplier: Low spend but high risk if supply fails (e.g., sole source).
-Nuisance/Divest Supplier: High-cost, low-value vendors to be phased out.
-
-Classification FrameworksTier Levels (Supply Chain):
-Tier 1: Direct suppliers of final products/services.
-Tier 2: Suppliers to Tier 1.
-Tier 3: Suppliers to Tier 2 (often raw materials).
-
-Supplier Characteristics:
-Diversity Owned: Woman, minority, or veteran-owned.
-ESG Compliant: Meets Environmental, Social, and Governance standards.
-Certified: Holds specific ISO, FDA, or OSHA certifications.
-
-Examples of Classification Types
-High-Volume: Providers of critical consumables like fuel or electricity.
-Non-Substitutable: Original Equipment Manufacturers (OEMs).
-
-Risk Level: Low, Medium, or High (based on financial or geopolitical factors).
 
 
-```{r }
-df <- data.frame(
-  supplier_type = sample(c("local", "international") ,100 ,replace = TRUE),
-  category = sample(c("strategic", "preferred", "tactical", "bottleneck", "nuisance") ,100 ,replace = TRUE)
-)
 
-print(df)
 
-```
+
